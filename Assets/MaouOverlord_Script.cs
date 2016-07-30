@@ -4,35 +4,31 @@ using System.Collections;
 
 public class MaouOverlord_Script : MonoBehaviour {
 
-	public Text People;
-	public Text AP;
-	public Text Nuke;
+	public Text Score;
 	public Text Frames;
+	int CurScore = 0;
 
 	void Start()
 	{
-		string NukeTxt = "/10";
-
-		int PeopleNum = 0;
-		int APNum = 0;
-		int NukeNum = 0;
-
-
-
-
-		Nuke.text = NukeNum.ToString() + "/10";
-		AP.text = APNum.ToString() + "/20";
-		People.text = PeopleNum.ToString ()+ "/10";
+		
+	
 	}
 
 	void Update()
 	{
-
+		Score.text = CurScore.ToString();
 		int totalFrames = Time.frameCount;
-
 		Frames.text = totalFrames.ToString ();
 
-		
-	}
+		if ( Input.GetMouseButtonDown(0))
+		{
+			RaycastHit hit = new RaycastHit (); 
+			Ray ray= Camera.main.ScreenPointToRay (Input.mousePosition);
 
+			if (Physics.Raycast(transform.position, transform.forward, 10))
+			{  
+				Destroy(GameObject.Find("loot"));
+			}
+		}
+	}
 }
