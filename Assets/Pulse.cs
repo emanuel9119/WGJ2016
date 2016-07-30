@@ -10,8 +10,8 @@ public class Pulse : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float hole = Mathf.Sin (Time.timeSinceLevelLoad * 13f) * 3f + i; //freq , amp , i
-			i += 0.1f;
+		float hole = Mathf.Sin (Time.timeSinceLevelLoad * 6f) * 0.5f + i; //freq , amp , i
+			i += 0.001f;
 		myObject.transform.localScale = new Vector3 (hole, hole, hole); 
 	}
 }
