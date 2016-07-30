@@ -11,7 +11,7 @@ public class Pulse : MonoBehaviour {
 	void Update () {
 
 		float hole = Mathf.Sin (Time.timeSinceLevelLoad * 6f) * 0.5f + i; //freq , amp , i
-			i += 0.001f;
+			i += 0.01f;
 		myObject.transform.localScale = new Vector3 (hole, hole, hole); 
 	}
 }
