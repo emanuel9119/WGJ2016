@@ -4,8 +4,9 @@ using System.Collections;
 
 public class MaouOverlord_Script : MonoBehaviour {
 
-	public Panel people;
-	public Panel AP;
+	public Text people;
+	public Text AP;
+	public Text Nuke;
 
 
 }
