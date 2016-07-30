@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-	public void ChangeScene(string sceneName)
+	public void LoadScene (string name)
 	{
-		SceneManager.LoadScene ("MainGame");
+		SceneManager.LoadScene (name);
 	}
 }
